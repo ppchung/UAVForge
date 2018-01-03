@@ -28,4 +28,6 @@ def killgphoto2Process():
 				pid = int(line.split(None,1)[0])
 				os.kill(pid, signal.SIGKILL)
 """
-
+wakeupCommand = "--summary"
+captureCommand = "--capture-image-and-download"
+gp(captureCommand)
