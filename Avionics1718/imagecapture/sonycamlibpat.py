@@ -31,3 +31,8 @@ def killgphoto2Process():
 wakeupCommand = "--summary"
 captureCommand = "--capture-image-and-download"
 gp(captureCommand)
+sleep(4)
+p = subprocess.Popen(['gphoto2', '--capture-image-and-download'], stdout=subprocess.PIPE)
+out, err = p.communicate()
+for line in out.splitlines():
+	print(line)
