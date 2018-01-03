@@ -28,8 +28,9 @@ def killgphoto2Process():
 				pid = int(line.split(None,1)[0])
 				os.kill(pid, signal.SIGKILL)
 """
+photoNum = 0
 wakeupCommand = "--summary"
-captureCommand = "--capture-image-and-download"
+captureCommand = "--capture-image-and-download --filename=sony" + photoNum + ".jpg --force-overwrite"
 gp(captureCommand)
 """
 sleep(4)
@@ -38,3 +39,4 @@ out, err = p.communicate()
 for line in out.splitlines():
 	print(line)
 """
+
