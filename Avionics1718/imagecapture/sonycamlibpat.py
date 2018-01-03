@@ -30,7 +30,7 @@ def killgphoto2Process():
 """
 photoNum = 0
 wakeupCommand = "--summary"
-captureCommand = "--capture-image-and-download --filename=sony" + photoNum + ".jpg --force-overwrite"
+captureCommand = "--capture-image-and-download --filename=sony" + str(photoNum) + ".jpg --force-overwrite"
 gp(captureCommand)
 """
 sleep(4)
