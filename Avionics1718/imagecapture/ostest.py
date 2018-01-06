@@ -15,10 +15,12 @@ print(out)
 sleep(1)
 p = subprocess.Popen(['sudo', 'gphoto2', '--capture-image-and-download', '--filename=001.jpg', '--force-overwrite'], stdout=subprocess.PIPE)
 out, err = p.communicate()
+print(out)
 sleep(1)
 photoNum = 3
 p = subprocess.Popen(['sudo', 'gphoto2', '--capture-image-and-download', '--filename='+str(photoNum)+'.jpg', '--force-overwrite'], stdout=subprocess.PIPE)
 out, err = p.communicate()
+print(out)
 sleep(1)
 subprocess.call(['sudo', 'feh', str(photoNum)+'.jpg', '-.'])
 """
