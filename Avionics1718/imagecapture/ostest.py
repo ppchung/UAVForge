@@ -6,3 +6,5 @@ os.system("sudo gphoto2 --capture-image-and-download --filename=001.jpg --force-
 photoNum = 3
 sleep(1)
 os.system("sudo gphoto2 --capture-image-and-download --filename=" + str(photoNum) + ".jpg --force-overwrite")
+sleep(1)
+os.system("sudo feh " + str(photoNum) + ".jpg -.")
