@@ -8,7 +8,7 @@ x = 0
 
 # GPIO
 pin.setmode(pin.BCM)     # set up BCM GPIO numbering
-pin.setup(23, pin.IN,pull_up_down=pin.PUD_UP)    # set GPIO23 as input (button) this pin has an internal pullup
+pin.setup(23, pin.IN,pull_up_down=pin.PUD_DOWN)    # set GPIO23 as input (button) this pin has an internal pullup
 pin.setup(25, pin.OUT)	 # set GPIO25 as output (LED) if it is solid, then it is takingpictures, if it blinks, then it is not
 try:
 	pin.output(25,0)
